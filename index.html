@@ -20,7 +20,9 @@
 
 
     <style>
-      
+      a{
+        margin: 5px;
+      }
       body {
             font-family: 'Questrial', sans-serif;   
           }
@@ -40,11 +42,42 @@
       .column{
         padding: 5px;
       }
+      .newone{
+        border-top: 1px solid grey;
+        
+      }
+      div > hr {
+        padding-bottom: 5%;
+        margin: 0%;
+        opacity: 0;
+      }
+      div:hover > hr {
+        transition: opacity 1s ease-in-out; /* For Safari 3.1 to 6.0 */
+        transition: opacity 1s  ease-in-out;
+        opacity: 1;
+      }
+      .lol{
+       height: 20px;
+      }
+      .myc{
+        position: relative;
+        height: 200px;
+        top: 50%;
+        width: 100%;
+      }
+      .myp{
+        font-size:1.5rem;
+      }
+      .myhr{
+        opacity: 0.1;
+        border-top: 2px solid rgb(0, 0, 0);
+      }
       @media only screen and (min-width: 1200px) {
         .column{
           width: 25%;
           height: 100%;
         }
+
       }
       @media only screen and (max-width: 1200px) {
         .column{
@@ -53,6 +86,9 @@
         }
         .container{
           max-width: 40rem;
+        }
+        .bd-placeholder-img:hover{
+          transform: scale(1);
         }
       }
       @media only screen and (max-width: 768px) {
@@ -65,10 +101,16 @@
       }
       /* phone */
       @media only screen and (max-width: 500px) {
+        .myp{
+        font-size:0rem;
+      }
         .column{
           width: 50%;
           padding: 2px;
         }
+        .myp{
+        font-size:1.5rem;
+         }
         .container{
           max-width: 25rem;
         }
@@ -86,21 +128,14 @@
           padding-left: 15px;
           text-align: center;
         }
-      }
-      .newone{
-        border-top: 1px solid grey;
+        #particles-js{
+        height: 320px;
+        margin: 0;
         
+        }
       }
-      div > hr {
-        padding-bottom: 5%;
-        margin: 0%;
-        opacity: 0;
-      }
-      div:hover > hr {
-        transition: opacity 1s ease-in-out; /* For Safari 3.1 to 6.0 */
-        transition: opacity 1s  ease-in-out;
-        opacity: 1;
-      }
+      /* end phone */
+      
     </style>
 
     
@@ -144,14 +179,19 @@
 <main role="main">
 
   <section class="jumbotron text-center">
-    <div class="container">
-      <h1>Address</h1>
-      <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
-      <p>
-        <a href="#" class="btn btn-primary my-2">Show On Map</a>
-        <a href="#" class="btn btn-secondary my-2">Contact us</a>
-      </p>
-    </div>
+    
+      
+      <div id="particles-js" class="myc">
+        <div class="container lol">
+          <h2>Address</h2>
+          <hr class="myhr">
+          <p class="myp lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+          <p>
+            <a href="#" class="btn btn-primary my-2">Show On Map</a>
+            <a href="#" class="btn btn-secondary my-2">Contact us</a>
+          </p>
+        </div>
+      </div>
   </section>
 
   <div class="album py-5 bg-light">
@@ -283,10 +323,12 @@
       <a href="#">Back to top</a>
     </p>
     <p>Sethi's Coleection &copy;All rights reserved , 2021.</p>
+    <p> Devloped & Maintained by <a href="https://shazam-baba.github.io/">Shazam</a></p>
     <p> All products are trademark of SETHI'S COLLECTION.</p>
   </div>
 </footer>
-
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
