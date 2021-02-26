@@ -35,10 +35,12 @@
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
+        transition: transform .5s ease;
         
       }
       .bd-placeholder-img:hover{
         transform: scale(1.1);
+        
       }
       .column{
         padding: 5px;
@@ -51,10 +53,11 @@
         padding-bottom: 5%;
         margin: 0%;
         opacity: 0;
+        transition: opacity 0.1s ease; /* For Safari 3.1 to 6.0 */
+        transition: opacity 0.5s  ease;
       }
       div:hover > hr {
-        transition: opacity 1s ease-in-out; /* For Safari 3.1 to 6.0 */
-        transition: opacity 1s  ease-in-out;
+        
         opacity: 1;
       }
       .lol{
