@@ -11,7 +11,8 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/album/">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
 
     <!-- Bootstrap core CSS -->
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -19,7 +20,12 @@
 
 
     <style>
+      
+      body {
+            font-family: 'Questrial', sans-serif;   
+          }
       .bd-placeholder-img {
+        position:relative;
         font-size: 1.125rem;
         text-anchor: middle;
         -webkit-user-select: none;
@@ -31,10 +37,69 @@
       .bd-placeholder-img:hover{
         transform: scale(1.1);
       }
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
+      .column{
+        padding: 5px;
+      }
+      @media only screen and (min-width: 1200px) {
+        .column{
+          width: 25%;
+          height: 100%;
         }
+      }
+      @media only screen and (max-width: 1200px) {
+        .column{
+          width: 33.33%;
+          height: 70%;
+        }
+        .container{
+          max-width: 40rem;
+        }
+      }
+      @media only screen and (max-width: 768px) {
+        .column{
+          width: 50%;
+        }
+        .container{
+          max-width: 30rem;
+        }
+      }
+      /* phone */
+      @media only screen and (max-width: 500px) {
+        .column{
+          width: 50%;
+          padding: 10px;
+        }
+        .container{
+          max-width: 25rem;
+        }
+        h1{
+          font-size: 20px;
+        }
+        p{
+          font-size:10px;
+        }
+        .ehehbtn{
+          font-size:15px;
+          padding-top:5%;
+          padding-bottom:5%;
+          padding-right: 15px;
+          padding-left: 15px;
+          text-align: center;
+        }
+      }
+      .newone{
+        border-top: 1px solid grey;
+        
+      }
+      div > hr {
+        padding-bottom: 5%;
+        margin: 0%;
+        opacity: 0;
+      }
+      div:hover > hr {
+        transition: opacity 1s ease-in-out; /* For Safari 3.1 to 6.0 */
+        transition: opacity 1s  ease-in-out;
+        opacity: 1;
       }
     </style>
 
@@ -90,19 +155,23 @@
   </section>
 
   <div class="album py-5 bg-light">
-    <div class="container-fluid">
+    <div class="container">
 
       <div class="row">
-        <div class="col-md-3">
+        <div class="column">
           <div class="card mb-4 shadow-sm">
-            <img class="bd-placeholder-img card-img-top" width="100%" height="350" src="siddharth.jpg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
+            <img class="bd-placeholder-img card-img-top" width="100%" src="demo.jpg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
 
             <div class="card-body">
-              <h1>Name</h1>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div>
+                <h1><strong>Name</strong>
+                </h1>
+                <hr class="newone">
+              </div>
+              <p class="card-text">A little bit of Product description. Telling about color , brand, size, wash-type, etc. Also availability of stuff at shop.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary ehehbtn">View</button>
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                 </div>
                 <small class="text-muted">9 mins</small>
@@ -111,16 +180,20 @@
           </div>
         </div>
 
-        <div class="col-md-3">
+        <div class="column">
           <div class="card mb-4 shadow-sm">
-            <img class="bd-placeholder-img card-img-top" width="100%" height="350" src="siddharth.jpg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
+            <img class="bd-placeholder-img card-img-top" width="100%" src="demo.jpg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
 
             <div class="card-body">
-              <h1>Name</h1>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div>
+                <h1><strong>Name</strong>
+                </h1>
+                <hr class="newone">
+              </div>
+              <p class="card-text">A little bit of Product description. Telling about color , brand, size, wash-type, etc. Also availability of stuff at shop.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary ehehbtn">View</button>
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                 </div>
                 <small class="text-muted">9 mins</small>
@@ -129,16 +202,20 @@
           </div>
         </div>
 
-        <div class="col-md-3">
+        <div class="column">
           <div class="card mb-4 shadow-sm">
-            <img class="bd-placeholder-img card-img-top" width="100%" height="350" src="siddharth.jpg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
+            <img class="bd-placeholder-img card-img-top" width="100%" src="demo.jpg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
 
             <div class="card-body">
-              <h1>Name</h1>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div>
+                <h1><strong>Name</strong>
+                </h1>
+                <hr class="newone">
+              </div>
+              <p class="card-text">A little bit of Product description. Telling about color , brand, size, wash-type, etc. Also availability of stuff at shop.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary ehehbtn">View</button>
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                 </div>
                 <small class="text-muted">9 mins</small>
@@ -147,16 +224,20 @@
           </div>
         </div>
 
-        <div class="col-md-3">
+        <div class="column">
           <div class="card mb-4 shadow-sm">
-            <img class="bd-placeholder-img card-img-top" width="100%" height="350" src="siddharth.jpg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
+            <img class="bd-placeholder-img card-img-top" width="100%" src="demo.jpg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
 
             <div class="card-body">
-              <h1>Name</h1>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div>
+                <h1><strong>Name</strong>
+                </h1>
+                <hr class="newone">
+              </div>
+              <p class="card-text">A little bit of Product description. Telling about color , brand, size, wash-type, etc. Also availability of stuff at shop.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary ehehbtn">View</button>
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                 </div>
                 <small class="text-muted">9 mins</small>
@@ -165,6 +246,27 @@
           </div>
         </div>
 
+        <div class="column">
+          <div class="card mb-4 shadow-sm">
+            <img class="bd-placeholder-img card-img-top" width="100%" src="demo.jpg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
+
+            <div class="card-body">
+              <div>
+                <h1><strong>Name</strong>
+                </h1>
+                <hr class="newone">
+              </div>
+              <p class="card-text">A little bit of Product description. Telling about color , brand, size, wash-type, etc. Also availability of stuff at shop.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary ehehbtn">View</button>
+                  <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
         
 
         

@@ -31,9 +31,7 @@ footer {
 footer p {
   margin-bottom: .25rem;
 }
-.container-fluid{
-  width: 80%;
-}
+
 .img:hover{
   transform: scale(1.1);
 }
