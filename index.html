@@ -178,6 +178,27 @@
       </button>
     </div>
   </div>
+  <!--  -->
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Home</li>
+    </ol>
+  </nav>
+  
+  <!-- <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Library</li>
+    </ol>
+  </nav>
+  
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Library</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Data</li>
+    </ol>
+  </nav> -->
 </header>
 
 <main role="main">
@@ -318,6 +339,40 @@
       </div>
     </div>
   </div>
+
+  <nav aria-label="Page navigation example">
+    <ul class="pagination pagination-sm justify-content-center">
+      <li class="page-item disabled">
+        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item active" aria-current="page">
+        <a class="page-link" href="#">2</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#">Next</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="pagination justify-content-center">
+    <span class="step-links">
+        <!-- {% if page_obj.has_previous %} -->
+            <a href="#">&laquo; first</a>
+            <a href="#">previous</a>
+        <!-- {% endif %} -->
+
+        <span class="current">
+            <!-- Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}. -->
+        </span>
+
+        <!-- {% if page_obj.has_next %} -->
+            <a href="#">next</a>
+            <a href="#">last &raquo;</a>
+        <!-- {% endif %} -->
+    </span>
+</div>
 
 </main>
 
